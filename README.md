@@ -52,8 +52,10 @@ The code should run with no issues using Python versions 3 with the following li
 ## Results <a name="results"></a>
 
 This is the expected frontpage from the website:
+![image](https://user-images.githubusercontent.com/77889112/111043904-13c07080-8424-11eb-80c1-33c76344a1f9.png)
 
 By inputting a sentence it should be able to see the categorie result:
+![image](https://user-images.githubusercontent.com/77889112/111043899-0c996280-8424-11eb-9db6-7333ffdac071.png)
 
 
 
