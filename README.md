@@ -59,7 +59,6 @@ By inputting a sentence it should be able to see the categorie result:
 
 Below are the accurancy and the execution time that I found for the tested pipeline 
 
-**Main():**
 - Accurancy: 94.2571
 - Executation time: 82.17 seconds
 
