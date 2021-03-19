@@ -9,7 +9,7 @@ from nltk.tokenize import word_tokenize
 from flask import Flask
 from flask import render_template, request, jsonify
 from plotly.graph_objs import Bar
-#from sklearn.externals import joblib #Deprecation
+#from sklearn.externals import joblib
 from sqlalchemy import create_engine
 
 
@@ -45,9 +45,12 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
 
-    #Chart 2
+    #chart 2
     top_category = df.drop(columns=['id','message','original','genre',
-                                    'related', 'request', 'offer', 'direct_report']).sum().sort_values(ascending=False).head(10) #dropped the related, request, offer and direct_report columns since those are not a real disasters.
+                                    'related', 'request', 'offer', 'direct_report']).sum().sort_values(ascending=False).head(10)
+
+    #dropped the related, request, offer and direct_report columns since those are not a real disasters.
+
     
     # create visuals
     graphs = [
@@ -69,7 +72,8 @@ def index():
                 }
             }
         },
-        
+
+
         {
             'data': [
                 Bar(
