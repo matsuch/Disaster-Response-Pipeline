@@ -43,8 +43,7 @@ The code should run with no issues using Python versions 3 with the following li
   - process_data.py - *Code that reads and cleans the csv files and stores it in a SQL database.*
   - db_disaster_messages.db - *Dataset created after the transformed and cleaned data from the disasters CSV files.*
 - Models
-  - train_classifer.py - *Code necessary to load data and run the machine learning model.*
-  - classifier.pkl - *Pickle file from the train_classifer code.*
+  - train_classifer.py - *Code necessary to load data and run the machine learning model, this will create a pickle file at the end (classifier.pkl)*
 - App
   - run.py - *Flask app and the user interface used to predict results and display them.*
   - templates - *Folder containing the html template files*
@@ -52,26 +51,19 @@ The code should run with no issues using Python versions 3 with the following li
 ## Results <a name="results"></a>
 
 This is the expected frontpage from the website:
-![image](https://user-images.githubusercontent.com/77889112/111043904-13c07080-8424-11eb-80c1-33c76344a1f9.png)
+![home](https://user-images.githubusercontent.com/77889112/111717758-77d5a100-8837-11eb-9dd9-40de2700bc72.png)
+
 
 By inputting a sentence it should be able to see the categorie result:
 ![image](https://user-images.githubusercontent.com/77889112/111043899-0c996280-8424-11eb-9db6-7333ffdac071.png)
 
-Below are the accurancy and the execution time that I found for the 3 tested pipeline in the **ML Pipeline Preparation.ipynb**
+Below are the accurancy and the execution time that I found for the tested pipeline 
 
 **Main():**
-- Accurancy: 94.2736
-- Executation time: 76.71 seconds
+- Accurancy: 94.2571
+- Executation time: 82.17 seconds
 
-**Main_boosted():**
-- Accurancy: 94.1286
-- Executation time: 135.15 seconds
-
-**Main_boosted_2():**
-- Accurancy: 94.3261
-- Executation time: 873.03 seconds
-
-Feel free to change the the **build_model()** function in the **train_classifier.py** file (models folder)
+There are other options in the **ML Pipeline Preparation.ipynb**. Feel free to change the the **build_model()** function in the **train_classifier.py** file (models folder)
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
