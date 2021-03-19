@@ -40,12 +40,19 @@ model = joblib.load("./models/classifier.pkl")
 def index():
     
     # extract data needed for visuals
-    # TODO: Below is an example - modify to extract data for your own visuals
+
+    #shart 1
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
+
+    #Shart 2
+    top_category = df.drop(columns=['id','message','original','genre',
+                                    'related', 'request', 'offer', 'direct_report']).sum().sort_values(ascending=False).head(10)
+
+    #dropped the related, request, offer and direct_report columns since those are not a real disasters.
+
     
     # create visuals
-    # TODO: Below is an example - modify to create your own visuals
     graphs = [
         {
             'data': [
@@ -62,6 +69,26 @@ def index():
                 },
                 'xaxis': {
                     'title': "Genre"
+                }
+            }
+        },
+
+
+        {
+            'data': [
+                Bar(
+                    x=top_category.index,
+                    y=top_category.values
+                )
+            ],
+
+            'layout': {
+                'title': 'Top 10 Disaster Categories',
+                'yaxis': {
+                    'title': "Sum of Massages"
+                },
+                'xaxis': {
+                    'title': "Category"
                 }
             }
         }
