@@ -69,7 +69,7 @@ def save_data(df, database_filename):
     database_filename (str): The file name of the database
     """  
     engine = create_engine('sqlite:///db_disaster_messages.db')
-    df.to_sql('disaster_massages_table', engine, index=False)
+    df.to_sql('disaster_massages_table', engine, index=False, if_exists='replace')
 
 def main():
     if len(sys.argv) == 4:
