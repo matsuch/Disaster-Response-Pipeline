@@ -57,12 +57,7 @@ This is the expected frontpage from the website:
 By inputting a sentence it should be able to see the categorie result:
 ![image](https://user-images.githubusercontent.com/77889112/111043899-0c996280-8424-11eb-9db6-7333ffdac071.png)
 
-Below are the accurancy and the execution time that I found for the tested pipeline 
-
-- Accurancy: 94.2571
-- Executation time: 82.17 seconds
-
-There are other options in the **ML Pipeline Preparation.ipynb**. Feel free to change the the **build_model()** function in the **train_classifier.py** file (models folder)
+There are other options for the pipeline in the **ML Pipeline Preparation.ipynb**. Feel free to change the **build_model()** function in the **train_classifier.py** file (models folder)
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
