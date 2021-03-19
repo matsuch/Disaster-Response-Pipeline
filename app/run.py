@@ -41,16 +41,13 @@ def index():
     
     # extract data needed for visuals
 
-    #shart 1
+    #chart 1
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
 
-    #Shart 2
+    #Chart 2
     top_category = df.drop(columns=['id','message','original','genre',
-                                    'related', 'request', 'offer', 'direct_report']).sum().sort_values(ascending=False).head(10)
-
-    #dropped the related, request, offer and direct_report columns since those are not a real disasters.
-
+                                    'related', 'request', 'offer', 'direct_report']).sum().sort_values(ascending=False).head(10) #dropped the related, request, offer and direct_report columns since those are not a real disasters.
     
     # create visuals
     graphs = [
@@ -72,8 +69,7 @@ def index():
                 }
             }
         },
-
-
+        
         {
             'data': [
                 Bar(
